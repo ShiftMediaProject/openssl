@@ -868,14 +868,14 @@ $L$dec_epilogue:
 	mov	rsi,QWORD[16+rsp]
 	DB	0F3h,0C3h		;repret
 $L$SEH_end_AES_decrypt:
-global	private_AES_set_encrypt_key
+global	AES_set_encrypt_key
 
 ALIGN	16
-private_AES_set_encrypt_key:
+AES_set_encrypt_key:
 	mov	QWORD[8+rsp],rdi	;WIN64 prologue
 	mov	QWORD[16+rsp],rsi
 	mov	rax,rsp
-$L$SEH_begin_private_AES_set_encrypt_key:
+$L$SEH_begin_AES_set_encrypt_key:
 	mov	rdi,rcx
 	mov	rsi,rdx
 	mov	rdx,r8
@@ -899,7 +899,7 @@ $L$enc_key_epilogue:
 	mov	rdi,QWORD[8+rsp]	;WIN64 epilogue
 	mov	rsi,QWORD[16+rsp]
 	DB	0F3h,0C3h		;repret
-$L$SEH_end_private_AES_set_encrypt_key:
+$L$SEH_end_AES_set_encrypt_key:
 
 
 ALIGN	16
@@ -1140,14 +1140,14 @@ $L$badpointer:
 $L$exit:
 DB	0xf3,0xc3
 
-global	private_AES_set_decrypt_key
+global	AES_set_decrypt_key
 
 ALIGN	16
-private_AES_set_decrypt_key:
+AES_set_decrypt_key:
 	mov	QWORD[8+rsp],rdi	;WIN64 prologue
 	mov	QWORD[16+rsp],rsi
 	mov	rax,rsp
-$L$SEH_begin_private_AES_set_decrypt_key:
+$L$SEH_begin_AES_set_decrypt_key:
 	mov	rdi,rcx
 	mov	rsi,rdx
 	mov	rdx,r8
@@ -1337,7 +1337,7 @@ $L$dec_key_epilogue:
 	mov	rdi,QWORD[8+rsp]	;WIN64 epilogue
 	mov	rsi,QWORD[16+rsp]
 	DB	0F3h,0C3h		;repret
-$L$SEH_end_private_AES_set_decrypt_key:
+$L$SEH_end_AES_set_decrypt_key:
 global	AES_cbc_encrypt
 
 ALIGN	16
@@ -2829,13 +2829,13 @@ ALIGN	4
 	DD	$L$SEH_end_AES_decrypt wrt ..imagebase
 	DD	$L$SEH_info_AES_decrypt wrt ..imagebase
 
-	DD	$L$SEH_begin_private_AES_set_encrypt_key wrt ..imagebase
-	DD	$L$SEH_end_private_AES_set_encrypt_key wrt ..imagebase
-	DD	$L$SEH_info_private_AES_set_encrypt_key wrt ..imagebase
+	DD	$L$SEH_begin_AES_set_encrypt_key wrt ..imagebase
+	DD	$L$SEH_end_AES_set_encrypt_key wrt ..imagebase
+	DD	$L$SEH_info_AES_set_encrypt_key wrt ..imagebase
 
-	DD	$L$SEH_begin_private_AES_set_decrypt_key wrt ..imagebase
-	DD	$L$SEH_end_private_AES_set_decrypt_key wrt ..imagebase
-	DD	$L$SEH_info_private_AES_set_decrypt_key wrt ..imagebase
+	DD	$L$SEH_begin_AES_set_decrypt_key wrt ..imagebase
+	DD	$L$SEH_end_AES_set_decrypt_key wrt ..imagebase
+	DD	$L$SEH_info_AES_set_decrypt_key wrt ..imagebase
 
 	DD	$L$SEH_begin_AES_cbc_encrypt wrt ..imagebase
 	DD	$L$SEH_end_AES_cbc_encrypt wrt ..imagebase
@@ -2851,11 +2851,11 @@ $L$SEH_info_AES_decrypt:
 DB	9,0,0,0
 	DD	block_se_handler wrt ..imagebase
 	DD	$L$dec_prologue wrt ..imagebase,$L$dec_epilogue wrt ..imagebase
-$L$SEH_info_private_AES_set_encrypt_key:
+$L$SEH_info_AES_set_encrypt_key:
 DB	9,0,0,0
 	DD	key_se_handler wrt ..imagebase
 	DD	$L$enc_key_prologue wrt ..imagebase,$L$enc_key_epilogue wrt ..imagebase
-$L$SEH_info_private_AES_set_decrypt_key:
+$L$SEH_info_AES_set_decrypt_key:
 DB	9,0,0,0
 	DD	key_se_handler wrt ..imagebase
 	DD	$L$dec_key_prologue wrt ..imagebase,$L$dec_key_epilogue wrt ..imagebase

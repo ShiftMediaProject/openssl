@@ -59,82 +59,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\ssl\bio_ssl.c" />
-    <ClCompile Include="..\ssl\d1_both.c" />
-    <ClCompile Include="..\ssl\d1_clnt.c" />
-    <ClCompile Include="..\ssl\d1_lib.c" />
-    <ClCompile Include="..\ssl\d1_meth.c" />
-    <ClCompile Include="..\ssl\d1_pkt.c" />
-    <ClCompile Include="..\ssl\d1_srtp.c" />
-    <ClCompile Include="..\ssl\d1_srvr.c" />
-    <ClCompile Include="..\ssl\kssl.c" />
-    <ClCompile Include="..\ssl\s23_clnt.c" />
-    <ClCompile Include="..\ssl\s23_lib.c" />
-    <ClCompile Include="..\ssl\s23_meth.c" />
-    <ClCompile Include="..\ssl\s23_pkt.c" />
-    <ClCompile Include="..\ssl\s23_srvr.c" />
-    <ClCompile Include="..\ssl\s2_clnt.c" />
-    <ClCompile Include="..\ssl\s2_enc.c" />
-    <ClCompile Include="..\ssl\s2_lib.c" />
-    <ClCompile Include="..\ssl\s2_meth.c" />
-    <ClCompile Include="..\ssl\s2_pkt.c" />
-    <ClCompile Include="..\ssl\s2_srvr.c" />
-    <ClCompile Include="..\ssl\s3_both.c" />
-    <ClCompile Include="..\ssl\s3_cbc.c" />
-    <ClCompile Include="..\ssl\s3_clnt.c" />
-    <ClCompile Include="..\ssl\s3_enc.c" />
-    <ClCompile Include="..\ssl\s3_lib.c" />
-    <ClCompile Include="..\ssl\s3_meth.c" />
-    <ClCompile Include="..\ssl\s3_pkt.c" />
-    <ClCompile Include="..\ssl\s3_srvr.c" />
-    <ClCompile Include="..\ssl\ssl_algs.c" />
-    <ClCompile Include="..\ssl\ssl_asn1.c" />
-    <ClCompile Include="..\ssl\ssl_cert.c" />
-    <ClCompile Include="..\ssl\ssl_ciph.c" />
-    <ClCompile Include="..\ssl\ssl_conf.c" />
-    <ClCompile Include="..\ssl\ssl_err.c" />
-    <ClCompile Include="..\ssl\ssl_err2.c" />
-    <ClCompile Include="..\ssl\ssl_lib.c" />
-    <ClCompile Include="..\ssl\ssl_rsa.c" />
-    <ClCompile Include="..\ssl\ssl_sess.c" />
-    <ClCompile Include="..\ssl\ssl_stat.c" />
-    <ClCompile Include="..\ssl\ssl_txt.c" />
-    <ClCompile Include="..\ssl\ssl_utst.c" />
-    <ClCompile Include="..\ssl\t1_clnt.c" />
-    <ClCompile Include="..\ssl\t1_enc.c" />
-    <ClCompile Include="..\ssl\t1_ext.c" />
-    <ClCompile Include="..\ssl\t1_lib.c" />
-    <ClCompile Include="..\ssl\t1_meth.c" />
-    <ClCompile Include="..\ssl\t1_reneg.c" />
-    <ClCompile Include="..\ssl\t1_srvr.c" />
-    <ClCompile Include="..\ssl\t1_trce.c" />
-    <ClCompile Include="..\ssl\tls_srp.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\crypto\constant_time_locl.h" />
-    <ClInclude Include="..\e_os.h" />
     <ClInclude Include="..\include\openssl\aes.h" />
     <ClInclude Include="..\include\openssl\asn1.h" />
-    <ClInclude Include="..\include\openssl\asn1_mac.h" />
     <ClInclude Include="..\include\openssl\asn1t.h" />
+    <ClInclude Include="..\include\openssl\asn1_mac.h" />
+    <ClInclude Include="..\include\openssl\async.h" />
     <ClInclude Include="..\include\openssl\bio.h" />
     <ClInclude Include="..\include\openssl\blowfish.h" />
     <ClInclude Include="..\include\openssl\bn.h" />
     <ClInclude Include="..\include\openssl\buffer.h" />
     <ClInclude Include="..\include\openssl\camellia.h" />
     <ClInclude Include="..\include\openssl\cast.h" />
+    <ClInclude Include="..\include\openssl\cmac.h" />
     <ClInclude Include="..\include\openssl\cms.h" />
     <ClInclude Include="..\include\openssl\comp.h" />
     <ClInclude Include="..\include\openssl\conf.h" />
     <ClInclude Include="..\include\openssl\conf_api.h" />
     <ClInclude Include="..\include\openssl\crypto.h" />
+    <ClInclude Include="..\include\openssl\ct.h" />
     <ClInclude Include="..\include\openssl\des.h" />
-    <ClInclude Include="..\include\openssl\des_old.h" />
     <ClInclude Include="..\include\openssl\dh.h" />
     <ClInclude Include="..\include\openssl\dsa.h" />
-    <ClInclude Include="..\include\openssl\dso.h" />
     <ClInclude Include="..\include\openssl\dtls1.h" />
-    <ClInclude Include="..\include\openssl\e_os2.h" />
     <ClInclude Include="..\include\openssl\ebcdic.h" />
     <ClInclude Include="..\include\openssl\ec.h" />
     <ClInclude Include="..\include\openssl\ecdh.h" />
@@ -142,17 +88,18 @@
     <ClInclude Include="..\include\openssl\engine.h" />
     <ClInclude Include="..\include\openssl\err.h" />
     <ClInclude Include="..\include\openssl\evp.h" />
+    <ClInclude Include="..\include\openssl\e_os2.h" />
     <ClInclude Include="..\include\openssl\hmac.h" />
     <ClInclude Include="..\include\openssl\idea.h" />
-    <ClInclude Include="..\include\openssl\krb5_asn.h" />
-    <ClInclude Include="..\include\openssl\kssl.h" />
+    <ClInclude Include="..\include\openssl\kdf.h" />
     <ClInclude Include="..\include\openssl\lhash.h" />
+    <ClInclude Include="..\include\openssl\md2.h" />
     <ClInclude Include="..\include\openssl\md4.h" />
     <ClInclude Include="..\include\openssl\md5.h" />
     <ClInclude Include="..\include\openssl\mdc2.h" />
     <ClInclude Include="..\include\openssl\modes.h" />
-    <ClInclude Include="..\include\openssl\obj_mac.h" />
     <ClInclude Include="..\include\openssl\objects.h" />
+    <ClInclude Include="..\include\openssl\obj_mac.h" />
     <ClInclude Include="..\include\openssl\ocsp.h" />
     <ClInclude Include="..\include\openssl\opensslv.h" />
     <ClInclude Include="..\include\openssl\ossl_typ.h" />
@@ -160,18 +107,19 @@
     <ClInclude Include="..\include\openssl\pem2.h" />
     <ClInclude Include="..\include\openssl\pkcs12.h" />
     <ClInclude Include="..\include\openssl\pkcs7.h" />
-    <ClInclude Include="..\include\openssl\pqueue.h" />
     <ClInclude Include="..\include\openssl\rand.h" />
     <ClInclude Include="..\include\openssl\rc2.h" />
     <ClInclude Include="..\include\openssl\rc4.h" />
+    <ClInclude Include="..\include\openssl\rc5.h" />
     <ClInclude Include="..\include\openssl\ripemd.h" />
     <ClInclude Include="..\include\openssl\rsa.h" />
     <ClInclude Include="..\include\openssl\safestack.h" />
     <ClInclude Include="..\include\openssl\seed.h" />
     <ClInclude Include="..\include\openssl\sha.h" />
+    <ClInclude Include="..\include\openssl\srp.h" />
+    <ClInclude Include="..\include\openssl\srtp.h" />
     <ClInclude Include="..\include\openssl\ssl.h" />
     <ClInclude Include="..\include\openssl\ssl2.h" />
-    <ClInclude Include="..\include\openssl\ssl23.h" />
     <ClInclude Include="..\include\openssl\ssl3.h" />
     <ClInclude Include="..\include\openssl\stack.h" />
     <ClInclude Include="..\include\openssl\symhacks.h" />
@@ -179,23 +127,18 @@
     <ClInclude Include="..\include\openssl\ts.h" />
     <ClInclude Include="..\include\openssl\txt_db.h" />
     <ClInclude Include="..\include\openssl\ui.h" />
-    <ClInclude Include="..\include\openssl\ui_compat.h" />
     <ClInclude Include="..\include\openssl\whrlpool.h" />
     <ClInclude Include="..\include\openssl\x509.h" />
-    <ClInclude Include="..\include\openssl\x509_vfy.h" />
     <ClInclude Include="..\include\openssl\x509v3.h" />
+    <ClInclude Include="..\include\openssl\x509_vfy.h" />
     <ClInclude Include="..\ms\uplink.h" />
-    <ClInclude Include="..\ssl\dtls1.h" />
-    <ClInclude Include="..\ssl\kssl.h" />
-    <ClInclude Include="..\ssl\kssl_lcl.h" />
-    <ClInclude Include="..\ssl\srtp.h" />
-    <ClInclude Include="..\ssl\ssl.h" />
-    <ClInclude Include="..\ssl\ssl2.h" />
-    <ClInclude Include="..\ssl\ssl23.h" />
-    <ClInclude Include="..\ssl\ssl3.h" />
+    <ClInclude Include="..\ssl\packet_locl.h" />
+    <ClInclude Include="..\ssl\record\record.h" />
+    <ClInclude Include="..\ssl\record\record_locl.h" />
     <ClInclude Include="..\ssl\ssl_locl.h" />
-    <ClInclude Include="..\ssl\tls1.h" />
-    <ClInclude Include="crypto\opensslconf.h" />
+    <ClInclude Include="..\ssl\statem\statem.h" />
+    <ClInclude Include="..\ssl\statem\statem_locl.h" />
+    <ClInclude Include="openssl\opensslconf.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
@@ -204,14 +147,52 @@
     <None Include="libssl.def" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="libopenssl.rc">
-      <PreprocessorDefinitions>SSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ResourceOutputFileName>$(IntDir)ssl.res</ResourceOutputFileName>
+    <ResourceCompile Include="libssl.rc">
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseLTO'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLLStaticDeps'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLLStaticDeps'">true</ExcludedFromBuild>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ssl\bio_ssl.c" />
+    <ClCompile Include="..\ssl\d1_lib.c" />
+    <ClCompile Include="..\ssl\d1_msg.c" />
+    <ClCompile Include="..\ssl\d1_srtp.c" />
+    <ClCompile Include="..\ssl\methods.c" />
+    <ClCompile Include="..\ssl\pqueue.c" />
+    <ClCompile Include="..\ssl\record\dtls1_bitmap.c" />
+    <ClCompile Include="..\ssl\record\rec_layer_d1.c" />
+    <ClCompile Include="..\ssl\record\rec_layer_s3.c" />
+    <ClCompile Include="..\ssl\record\ssl3_buffer.c" />
+    <ClCompile Include="..\ssl\record\ssl3_record.c" />
+    <ClCompile Include="..\ssl\s3_cbc.c" />
+    <ClCompile Include="..\ssl\s3_enc.c" />
+    <ClCompile Include="..\ssl\s3_lib.c" />
+    <ClCompile Include="..\ssl\s3_msg.c" />
+    <ClCompile Include="..\ssl\ssl_asn1.c" />
+    <ClCompile Include="..\ssl\ssl_cert.c" />
+    <ClCompile Include="..\ssl\ssl_ciph.c" />
+    <ClCompile Include="..\ssl\ssl_conf.c" />
+    <ClCompile Include="..\ssl\ssl_err.c" />
+    <ClCompile Include="..\ssl\ssl_init.c" />
+    <ClCompile Include="..\ssl\ssl_lib.c" />
+    <ClCompile Include="..\ssl\ssl_mcnf.c" />
+    <ClCompile Include="..\ssl\ssl_rsa.c" />
+    <ClCompile Include="..\ssl\ssl_sess.c" />
+    <ClCompile Include="..\ssl\ssl_stat.c" />
+    <ClCompile Include="..\ssl\ssl_txt.c" />
+    <ClCompile Include="..\ssl\ssl_utst.c" />
+    <ClCompile Include="..\ssl\statem\statem.c" />
+    <ClCompile Include="..\ssl\statem\statem_clnt.c" />
+    <ClCompile Include="..\ssl\statem\statem_dtls.c" />
+    <ClCompile Include="..\ssl\statem\statem_lib.c" />
+    <ClCompile Include="..\ssl\statem\statem_srvr.c" />
+    <ClCompile Include="..\ssl\t1_enc.c" />
+    <ClCompile Include="..\ssl\t1_ext.c" />
+    <ClCompile Include="..\ssl\t1_lib.c" />
+    <ClCompile Include="..\ssl\t1_reneg.c" />
+    <ClCompile Include="..\ssl\t1_trce.c" />
+    <ClCompile Include="..\ssl\tls_srp.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4022EC32-21E2-4116-BB9F-6AFF604C23FF}</ProjectGuid>
@@ -462,7 +443,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -480,97 +461,13 @@
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -599,7 +496,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -617,97 +514,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -736,7 +549,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -755,97 +568,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -874,7 +603,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -893,97 +622,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1012,7 +657,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -1030,97 +675,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1149,7 +710,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -1167,97 +728,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1296,7 +773,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -1319,97 +796,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1448,7 +841,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -1471,97 +864,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1600,7 +909,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -1623,97 +932,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1752,7 +977,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -1775,97 +1000,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -1904,7 +1045,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -1925,97 +1066,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -2054,7 +1111,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -2075,97 +1132,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -2204,7 +1177,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -2224,97 +1197,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl
@@ -2353,7 +1242,7 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <AdditionalIncludeDirectories>.\;..\;..\include\;..\crypto;..\crypto\evp;..\crypto\asn1;..\crypto\modes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
-      <DisableSpecificWarnings>4996;4267;4244;4311;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4311;4273;4090;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -2373,97 +1262,13 @@ del /f /q $(OutDir)\licenses\openssl.txt
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\openssl
 copy ..\include\openssl\*.h $(OutDir)\include\openssl
+copy .\openssl\opensslconf.h $(OutDir)\include\openssl
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\openssl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include (
-rd /s /q ..\include
-cd ../
-cd $(ProjectDir)
-)
-if exist ..\crypto\opensslconf.h (
-del ..\crypto\opensslconf.h
-)
-if not exist "..\include\openssl" (
-mkdir ..\include
-mkdir ..\include\openssl
-copy .\crypto\opensslconf.h ..\include\openssl
-copy ..\e_os.h ..\include\openssl
-copy ..\e_os2.h ..\include\openssl
-copy ..\crypto\crypto.h ..\include\openssl
-copy ..\crypto\ebcdic.h ..\include\openssl
-copy ..\crypto\opensslv.h ..\include\openssl
-copy ..\crypto\ossl_typ.h ..\include\openssl
-copy ..\crypto\symhacks.h ..\include\openssl
-copy ..\crypto\aes\aes.h ..\include\openssl
-copy ..\crypto\asn1\asn1.h ..\include\openssl
-copy ..\crypto\asn1\asn1_mac.h ..\include\openssl
-copy ..\crypto\asn1\asn1t.h ..\include\openssl
-copy ..\crypto\bf\blowfish.h ..\include\openssl
-copy ..\crypto\bio\bio.h ..\include\openssl
-copy ..\crypto\bn\bn.h ..\include\openssl
-copy ..\crypto\buffer\buffer.h ..\include\openssl
-copy ..\crypto\camellia\camellia.h ..\include\openssl
-copy ..\crypto\cast\cast.h ..\include\openssl
-copy ..\crypto\cmac\cmac.h ..\include\openssl
-copy ..\crypto\cms\cms.h ..\include\openssl
-copy ..\crypto\comp\comp.h ..\include\openssl
-copy ..\crypto\conf\conf.h ..\include\openssl
-copy ..\crypto\conf\conf_api.h ..\include\openssl
-copy ..\crypto\des\des.h ..\include\openssl
-copy ..\crypto\des\des_old.h ..\include\openssl
-copy ..\crypto\dh\dh.h ..\include\openssl
-copy ..\crypto\dsa\dsa.h ..\include\openssl
-copy ..\crypto\dso\dso.h ..\include\openssl
-copy ..\crypto\ec\ec.h ..\include\openssl
-copy ..\crypto\ecdh\ecdh.h ..\include\openssl
-copy ..\crypto\ecdsa\ecdsa.h ..\include\openssl
-copy ..\crypto\engine\engine.h ..\include\openssl
-copy ..\crypto\err\err.h ..\include\openssl
-copy ..\crypto\evp\evp.h ..\include\openssl
-copy ..\crypto\hmac\hmac.h ..\include\openssl
-copy ..\crypto\idea\idea.h ..\include\openssl
-copy ..\crypto\krb5\krb5_asn.h ..\include\openssl
-copy ..\crypto\lhash\lhash.h ..\include\openssl
-copy ..\crypto\md4\md4.h ..\include\openssl
-copy ..\crypto\md5\md5.h ..\include\openssl
-copy ..\crypto\mdc2\mdc2.h ..\include\openssl
-copy ..\crypto\modes\modes.h ..\include\openssl
-copy ..\crypto\objects\obj_mac.h ..\include\openssl
-copy ..\crypto\objects\objects.h ..\include\openssl
-copy ..\crypto\ocsp\ocsp.h ..\include\openssl
-copy ..\crypto\pem\pem.h ..\include\openssl
-copy ..\crypto\pem\pem2.h ..\include\openssl
-copy ..\crypto\pkcs7\pkcs7.h ..\include\openssl
-copy ..\crypto\pkcs12\pkcs12.h ..\include\openssl
-copy ..\crypto\pqueue\pqueue.h ..\include\openssl
-copy ..\crypto\rand\rand.h ..\include\openssl
-copy ..\crypto\rc2\rc2.h ..\include\openssl
-copy ..\crypto\rc4\rc4.h ..\include\openssl
-copy ..\crypto\ripemd\ripemd.h ..\include\openssl
-copy ..\crypto\rsa\rsa.h ..\include\openssl
-copy ..\crypto\seed\seed.h ..\include\openssl
-copy ..\crypto\sha\sha.h ..\include\openssl
-copy ..\crypto\srp\srp.h ..\include\openssl
-copy ..\crypto\stack\safestack.h ..\include\openssl
-copy ..\crypto\stack\stack.h ..\include\openssl
-copy ..\crypto\ts\ts.h ..\include\openssl
-copy ..\crypto\txt_db\txt_db.h ..\include\openssl
-copy ..\crypto\ui\ui.h ..\include\openssl
-copy ..\crypto\ui\ui_compat.h ..\include\openssl
-copy ..\crypto\whrlpool\whrlpool.h ..\include\openssl
-copy ..\crypto\x509\x509.h ..\include\openssl
-copy ..\crypto\x509\x509_vfy.h ..\include\openssl
-copy ..\crypto\x509v3\x509v3.h ..\include\openssl
-copy ..\ssl\dtls1.h ..\include\openssl
-copy ..\ssl\kssl.h ..\include\openssl
-copy ..\ssl\srtp.h ..\include\openssl
-copy ..\ssl\ssl.h ..\include\openssl
-copy ..\ssl\ssl2.h ..\include\openssl
-copy ..\ssl\ssl3.h ..\include\openssl
-copy ..\ssl\ssl23.h ..\include\openssl
-copy ..\ssl\tls1.h ..\include\openssl
+      <Command>if exist ..\include\openssl\opensslconf.h (
+del ..\include\openssl\opensslconf.h
 )
 if exist $(OutDir)\include\openssl (
 rd /s /q $(OutDir)\include\openssl

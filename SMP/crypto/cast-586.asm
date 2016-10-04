@@ -35,10 +35,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [4+ebp]
 	add	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -56,10 +56,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [12+ebp]
 	xor	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -77,10 +77,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [20+ebp]
 	sub	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -98,10 +98,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [28+ebp]
 	add	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -119,10 +119,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [36+ebp]
 	xor	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -140,10 +140,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [44+ebp]
 	sub	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -161,10 +161,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [52+ebp]
 	add	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -182,10 +182,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [60+ebp]
 	xor	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -203,10 +203,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [68+ebp]
 	sub	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -224,10 +224,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [76+ebp]
 	add	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -245,10 +245,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [84+ebp]
 	xor	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -266,10 +266,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [92+ebp]
 	sub	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -291,10 +291,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [100+ebp]
 	add	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -312,10 +312,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [108+ebp]
 	xor	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -333,10 +333,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [116+ebp]
 	sub	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -354,10 +354,10 @@ L$_CAST_encrypt_begin:
 	mov	ecx,DWORD [124+ebp]
 	add	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -408,10 +408,10 @@ L$_CAST_decrypt_begin:
 	mov	ecx,DWORD [124+ebp]
 	add	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -429,10 +429,10 @@ L$_CAST_decrypt_begin:
 	mov	ecx,DWORD [116+ebp]
 	sub	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -450,10 +450,10 @@ L$_CAST_decrypt_begin:
 	mov	ecx,DWORD [108+ebp]
 	xor	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -471,10 +471,10 @@ L$_CAST_decrypt_begin:
 	mov	ecx,DWORD [100+ebp]
 	add	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -493,10 +493,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [92+ebp]
 	sub	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -514,10 +514,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [84+ebp]
 	xor	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -535,10 +535,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [76+ebp]
 	add	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -556,10 +556,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [68+ebp]
 	sub	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -577,10 +577,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [60+ebp]
 	xor	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -598,10 +598,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [52+ebp]
 	add	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -619,10 +619,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [44+ebp]
 	sub	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -640,10 +640,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [36+ebp]
 	xor	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -661,10 +661,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [28+ebp]
 	add	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -682,10 +682,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [20+ebp]
 	sub	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -703,10 +703,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [12+ebp]
 	xor	edx,esi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh
@@ -724,10 +724,10 @@ L$001cast_dec_skip:
 	mov	ecx,DWORD [4+ebp]
 	add	edx,edi
 	rol	edx,cl
-	mov	ebx,edx
 	xor	ecx,ecx
+	mov	ebx,255
 	mov	cl,dh
-	and	ebx,255
+	and	ebx,edx
 	shr	edx,16
 	xor	eax,eax
 	mov	al,dh

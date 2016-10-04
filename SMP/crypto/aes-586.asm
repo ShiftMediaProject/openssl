@@ -2968,16 +2968,16 @@ L$045exit:
 	pop	ebx
 	pop	ebp
 	ret
-global	_private_AES_set_encrypt_key
+global	_AES_set_encrypt_key
 align	16
-_private_AES_set_encrypt_key:
-L$_private_AES_set_encrypt_key_begin:
+_AES_set_encrypt_key:
+L$_AES_set_encrypt_key_begin:
 	call	__x86_AES_set_encrypt_key
 	ret
-global	_private_AES_set_decrypt_key
+global	_AES_set_decrypt_key
 align	16
-_private_AES_set_decrypt_key:
-L$_private_AES_set_decrypt_key_begin:
+_AES_set_decrypt_key:
+L$_AES_set_decrypt_key_begin:
 	call	__x86_AES_set_encrypt_key
 	cmp	eax,0
 	je	NEAR L$054proceed

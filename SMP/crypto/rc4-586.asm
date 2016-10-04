@@ -270,10 +270,10 @@ L$000abort:
 	pop	ebx
 	pop	ebp
 	ret
-global	_private_RC4_set_key
+global	_RC4_set_key
 align	16
-_private_RC4_set_key:
-L$_private_RC4_set_key_begin:
+_RC4_set_key:
+L$_RC4_set_key_begin:
 	push	ebp
 	push	ebx
 	push	esi

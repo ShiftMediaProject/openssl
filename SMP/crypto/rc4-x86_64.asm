@@ -536,14 +536,14 @@ $L$epilogue:
 	mov	rsi,QWORD[16+rsp]
 	DB	0F3h,0C3h		;repret
 $L$SEH_end_RC4:
-global	private_RC4_set_key
+global	RC4_set_key
 
 ALIGN	16
-private_RC4_set_key:
+RC4_set_key:
 	mov	QWORD[8+rsp],rdi	;WIN64 prologue
 	mov	QWORD[16+rsp],rsi
 	mov	rax,rsp
-$L$SEH_begin_private_RC4_set_key:
+$L$SEH_begin_RC4_set_key:
 	mov	rdi,rcx
 	mov	rsi,rdx
 	mov	rdx,r8
@@ -617,7 +617,7 @@ $L$exit_key:
 	mov	rdi,QWORD[8+rsp]	;WIN64 epilogue
 	mov	rsi,QWORD[16+rsp]
 	DB	0F3h,0C3h		;repret
-$L$SEH_end_private_RC4_set_key:
+$L$SEH_end_RC4_set_key:
 
 global	RC4_options
 
@@ -754,15 +754,15 @@ ALIGN	4
 	DD	$L$SEH_end_RC4 wrt ..imagebase
 	DD	$L$SEH_info_RC4 wrt ..imagebase
 
-	DD	$L$SEH_begin_private_RC4_set_key wrt ..imagebase
-	DD	$L$SEH_end_private_RC4_set_key wrt ..imagebase
-	DD	$L$SEH_info_private_RC4_set_key wrt ..imagebase
+	DD	$L$SEH_begin_RC4_set_key wrt ..imagebase
+	DD	$L$SEH_end_RC4_set_key wrt ..imagebase
+	DD	$L$SEH_info_RC4_set_key wrt ..imagebase
 
 section	.xdata rdata align=8
 ALIGN	8
 $L$SEH_info_RC4:
 DB	9,0,0,0
 	DD	stream_se_handler wrt ..imagebase
-$L$SEH_info_private_RC4_set_key:
+$L$SEH_info_RC4_set_key:
 DB	9,0,0,0
 	DD	key_se_handler wrt ..imagebase

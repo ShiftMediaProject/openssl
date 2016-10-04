@@ -1527,10 +1527,10 @@ L$013done:
 	pop	ebx
 	pop	ebp
 	ret
-global	_private_Camellia_set_key
+global	_Camellia_set_key
 align	16
-_private_Camellia_set_key:
-L$_private_Camellia_set_key_begin:
+_Camellia_set_key:
+L$_Camellia_set_key_begin:
 	push	ebx
 	mov	ecx,DWORD [8+esp]
 	mov	ebx,DWORD [12+esp]

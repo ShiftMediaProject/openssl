@@ -211,6 +211,28 @@ $L$aligned:
 	jne	NEAR $L$ittle
 	DB	0F3h,0C3h		;repret
 
+
+global	CRYPTO_memcmp
+
+ALIGN	16
+CRYPTO_memcmp:
+	xor	rax,rax
+	xor	r10,r10
+	cmp	r8,0
+	je	NEAR $L$no_data
+$L$oop_cmp:
+	mov	r10b,BYTE[rcx]
+	lea	rcx,[1+rcx]
+	xor	r10b,BYTE[rdx]
+	lea	rdx,[1+rdx]
+	or	al,r10b
+	dec	r8
+	jnz	NEAR $L$oop_cmp
+	neg	rax
+	shr	rax,63
+$L$no_data:
+	DB	0F3h,0C3h		;repret
+
 global	OPENSSL_wipe_cpu
 
 ALIGN	16
@@ -230,6 +252,85 @@ OPENSSL_wipe_cpu:
 	lea	rax,[8+rsp]
 	DB	0F3h,0C3h		;repret
 
+global	OPENSSL_instrument_bus
+
+ALIGN	16
+OPENSSL_instrument_bus:
+	mov	r10,rcx
+	mov	rcx,rdx
+	mov	r11,rdx
+
+	rdtsc
+	mov	r8d,eax
+	mov	r9d,0
+	clflush	[r10]
+DB	0xf0
+	add	DWORD[r10],r9d
+	jmp	NEAR $L$oop
+ALIGN	16
+$L$oop:	rdtsc
+	mov	edx,eax
+	sub	eax,r8d
+	mov	r8d,edx
+	mov	r9d,eax
+	clflush	[r10]
+DB	0xf0
+	add	DWORD[r10],eax
+	lea	r10,[4+r10]
+	sub	rcx,1
+	jnz	NEAR $L$oop
+
+	mov	rax,r11
+	DB	0F3h,0C3h		;repret
+
+
+global	OPENSSL_instrument_bus2
+
+ALIGN	16
+OPENSSL_instrument_bus2:
+	mov	r10,rcx
+	mov	rcx,rdx
+	mov	r11,r8
+	mov	QWORD[8+rsp],rcx
+
+	rdtsc
+	mov	r8d,eax
+	mov	r9d,0
+
+	clflush	[r10]
+DB	0xf0
+	add	DWORD[r10],r9d
+
+	rdtsc
+	mov	edx,eax
+	sub	eax,r8d
+	mov	r8d,edx
+	mov	r9d,eax
+$L$oop2:
+	clflush	[r10]
+DB	0xf0
+	add	DWORD[r10],eax
+
+	sub	r11,1
+	jz	NEAR $L$done2
+
+	rdtsc
+	mov	edx,eax
+	sub	eax,r8d
+	mov	r8d,edx
+	cmp	eax,r9d
+	mov	r9d,eax
+	mov	edx,0
+	setne	dl
+	sub	rcx,rdx
+	lea	r10,[rdx*4+r10]
+	jnz	NEAR $L$oop2
+
+$L$done2:
+	mov	rax,QWORD[8+rsp]
+	sub	rax,rcx
+	DB	0F3h,0C3h		;repret
+
 global	OPENSSL_ia32_rdrand
 
 ALIGN	16
@@ -245,6 +346,46 @@ $L$break_rdrand:
 	DB	0F3h,0C3h		;repret
 
 
+global	OPENSSL_ia32_rdrand_bytes
+
+ALIGN	16
+OPENSSL_ia32_rdrand_bytes:
+	xor	rax,rax
+	cmp	rdx,0
+	je	NEAR $L$done_rdrand_bytes
+
+	mov	r11,8
+$L$oop_rdrand_bytes:
+DB	73,15,199,242
+	jc	NEAR $L$break_rdrand_bytes
+	dec	r11
+	jnz	NEAR $L$oop_rdrand_bytes
+	jmp	NEAR $L$done_rdrand_bytes
+
+ALIGN	16
+$L$break_rdrand_bytes:
+	cmp	rdx,8
+	jb	NEAR $L$tail_rdrand_bytes
+	mov	QWORD[rcx],r10
+	lea	rcx,[8+rcx]
+	add	rax,8
+	sub	rdx,8
+	jz	NEAR $L$done_rdrand_bytes
+	mov	r11,8
+	jmp	NEAR $L$oop_rdrand_bytes
+
+ALIGN	16
+$L$tail_rdrand_bytes:
+	mov	BYTE[rcx],r10b
+	lea	rcx,[1+rcx]
+	inc	rax
+	shr	r8,8
+	dec	rdx
+	jnz	NEAR $L$tail_rdrand_bytes
+
+$L$done_rdrand_bytes:
+	DB	0F3h,0C3h		;repret
+
 global	OPENSSL_ia32_rdseed
 
 ALIGN	16
@@ -257,5 +398,46 @@ DB	72,15,199,248
 $L$break_rdseed:
 	cmp	rax,0
 	cmove	rax,rcx
+	DB	0F3h,0C3h		;repret
+
+
+global	OPENSSL_ia32_rdseed_bytes
+
+ALIGN	16
+OPENSSL_ia32_rdseed_bytes:
+	xor	rax,rax
+	cmp	rdx,0
+	je	NEAR $L$done_rdseed_bytes
+
+	mov	r11,8
+$L$oop_rdseed_bytes:
+DB	73,15,199,250
+	jc	NEAR $L$break_rdseed_bytes
+	dec	r11
+	jnz	NEAR $L$oop_rdseed_bytes
+	jmp	NEAR $L$done_rdseed_bytes
+
+ALIGN	16
+$L$break_rdseed_bytes:
+	cmp	rdx,8
+	jb	NEAR $L$tail_rdseed_bytes
+	mov	QWORD[rcx],r10
+	lea	rcx,[8+rcx]
+	add	rax,8
+	sub	rdx,8
+	jz	NEAR $L$done_rdseed_bytes
+	mov	r11,8
+	jmp	NEAR $L$oop_rdseed_bytes
+
+ALIGN	16
+$L$tail_rdseed_bytes:
+	mov	BYTE[rcx],r10b
+	lea	rcx,[1+rcx]
+	inc	rax
+	shr	r8,8
+	dec	rdx
+	jnz	NEAR $L$tail_rdseed_bytes
+
+$L$done_rdseed_bytes:
 	DB	0F3h,0C3h		;repret
 
