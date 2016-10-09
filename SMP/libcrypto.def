@@ -4031,4 +4031,7 @@ EXPORTS
     v2i_GENERAL_NAMES
     v2i_GENERAL_NAME
     v2i_GENERAL_NAME_ex
+    OCSP_RESPID_match
+    OCSP_RESPID_set_by_key
+    OCSP_RESPID_set_by_name
 
