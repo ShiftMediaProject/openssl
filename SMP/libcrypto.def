@@ -4034,4 +4034,6 @@ EXPORTS
     OCSP_RESPID_match
     OCSP_RESPID_set_by_key
     OCSP_RESPID_set_by_name
+    DSO_dsobyaddr
+    DSO_pathbyaddr
 
