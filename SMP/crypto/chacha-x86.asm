@@ -401,443 +401,6 @@ L$ssse3_shortcut:
 	mov	DWORD [512+esp],ebp
 	lea	eax,[(L$ssse3_data-L$pic_point)+eax]
 	movdqu	xmm3,[ebx]
-	cmp	ecx,256
-	jb	NEAR L$0081x
-	mov	DWORD [516+esp],edx
-	mov	DWORD [520+esp],ebx
-	sub	ecx,256
-	lea	ebp,[384+esp]
-	movdqu	xmm7,[edx]
-	pshufd	xmm0,xmm3,0
-	pshufd	xmm1,xmm3,85
-	pshufd	xmm2,xmm3,170
-	pshufd	xmm3,xmm3,255
-	paddd	xmm0,[48+eax]
-	pshufd	xmm4,xmm7,0
-	pshufd	xmm5,xmm7,85
-	psubd	xmm0,[64+eax]
-	pshufd	xmm6,xmm7,170
-	pshufd	xmm7,xmm7,255
-	movdqa	[64+ebp],xmm0
-	movdqa	[80+ebp],xmm1
-	movdqa	[96+ebp],xmm2
-	movdqa	[112+ebp],xmm3
-	movdqu	xmm3,[16+edx]
-	movdqa	[ebp-64],xmm4
-	movdqa	[ebp-48],xmm5
-	movdqa	[ebp-32],xmm6
-	movdqa	[ebp-16],xmm7
-	movdqa	xmm7,[32+eax]
-	lea	ebx,[128+esp]
-	pshufd	xmm0,xmm3,0
-	pshufd	xmm1,xmm3,85
-	pshufd	xmm2,xmm3,170
-	pshufd	xmm3,xmm3,255
-	pshufd	xmm4,xmm7,0
-	pshufd	xmm5,xmm7,85
-	pshufd	xmm6,xmm7,170
-	pshufd	xmm7,xmm7,255
-	movdqa	[ebp],xmm0
-	movdqa	[16+ebp],xmm1
-	movdqa	[32+ebp],xmm2
-	movdqa	[48+ebp],xmm3
-	movdqa	[ebp-128],xmm4
-	movdqa	[ebp-112],xmm5
-	movdqa	[ebp-96],xmm6
-	movdqa	[ebp-80],xmm7
-	lea	esi,[128+esi]
-	lea	edi,[128+edi]
-	jmp	NEAR L$009outer_loop
-align	16
-L$009outer_loop:
-	movdqa	xmm1,[ebp-112]
-	movdqa	xmm2,[ebp-96]
-	movdqa	xmm3,[ebp-80]
-	movdqa	xmm5,[ebp-48]
-	movdqa	xmm6,[ebp-32]
-	movdqa	xmm7,[ebp-16]
-	movdqa	[ebx-112],xmm1
-	movdqa	[ebx-96],xmm2
-	movdqa	[ebx-80],xmm3
-	movdqa	[ebx-48],xmm5
-	movdqa	[ebx-32],xmm6
-	movdqa	[ebx-16],xmm7
-	movdqa	xmm2,[32+ebp]
-	movdqa	xmm3,[48+ebp]
-	movdqa	xmm4,[64+ebp]
-	movdqa	xmm5,[80+ebp]
-	movdqa	xmm6,[96+ebp]
-	movdqa	xmm7,[112+ebp]
-	paddd	xmm4,[64+eax]
-	movdqa	[32+ebx],xmm2
-	movdqa	[48+ebx],xmm3
-	movdqa	[64+ebx],xmm4
-	movdqa	[80+ebx],xmm5
-	movdqa	[96+ebx],xmm6
-	movdqa	[112+ebx],xmm7
-	movdqa	[64+ebp],xmm4
-	movdqa	xmm0,[ebp-128]
-	movdqa	xmm6,xmm4
-	movdqa	xmm3,[ebp-64]
-	movdqa	xmm4,[ebp]
-	movdqa	xmm5,[16+ebp]
-	mov	edx,10
-	nop
-align	16
-L$010loop:
-	paddd	xmm0,xmm3
-	movdqa	xmm2,xmm3
-	pxor	xmm6,xmm0
-	pshufb	xmm6,[eax]
-	paddd	xmm4,xmm6
-	pxor	xmm2,xmm4
-	movdqa	xmm3,[ebx-48]
-	movdqa	xmm1,xmm2
-	pslld	xmm2,12
-	psrld	xmm1,20
-	por	xmm2,xmm1
-	movdqa	xmm1,[ebx-112]
-	paddd	xmm0,xmm2
-	movdqa	xmm7,[80+ebx]
-	pxor	xmm6,xmm0
-	movdqa	[ebx-128],xmm0
-	pshufb	xmm6,[16+eax]
-	paddd	xmm4,xmm6
-	movdqa	[64+ebx],xmm6
-	pxor	xmm2,xmm4
-	paddd	xmm1,xmm3
-	movdqa	xmm0,xmm2
-	pslld	xmm2,7
-	psrld	xmm0,25
-	pxor	xmm7,xmm1
-	por	xmm2,xmm0
-	movdqa	[ebx],xmm4
-	pshufb	xmm7,[eax]
-	movdqa	[ebx-64],xmm2
-	paddd	xmm5,xmm7
-	movdqa	xmm4,[32+ebx]
-	pxor	xmm3,xmm5
-	movdqa	xmm2,[ebx-32]
-	movdqa	xmm0,xmm3
-	pslld	xmm3,12
-	psrld	xmm0,20
-	por	xmm3,xmm0
-	movdqa	xmm0,[ebx-96]
-	paddd	xmm1,xmm3
-	movdqa	xmm6,[96+ebx]
-	pxor	xmm7,xmm1
-	movdqa	[ebx-112],xmm1
-	pshufb	xmm7,[16+eax]
-	paddd	xmm5,xmm7
-	movdqa	[80+ebx],xmm7
-	pxor	xmm3,xmm5
-	paddd	xmm0,xmm2
-	movdqa	xmm1,xmm3
-	pslld	xmm3,7
-	psrld	xmm1,25
-	pxor	xmm6,xmm0
-	por	xmm3,xmm1
-	movdqa	[16+ebx],xmm5
-	pshufb	xmm6,[eax]
-	movdqa	[ebx-48],xmm3
-	paddd	xmm4,xmm6
-	movdqa	xmm5,[48+ebx]
-	pxor	xmm2,xmm4
-	movdqa	xmm3,[ebx-16]
-	movdqa	xmm1,xmm2
-	pslld	xmm2,12
-	psrld	xmm1,20
-	por	xmm2,xmm1
-	movdqa	xmm1,[ebx-80]
-	paddd	xmm0,xmm2
-	movdqa	xmm7,[112+ebx]
-	pxor	xmm6,xmm0
-	movdqa	[ebx-96],xmm0
-	pshufb	xmm6,[16+eax]
-	paddd	xmm4,xmm6
-	movdqa	[96+ebx],xmm6
-	pxor	xmm2,xmm4
-	paddd	xmm1,xmm3
-	movdqa	xmm0,xmm2
-	pslld	xmm2,7
-	psrld	xmm0,25
-	pxor	xmm7,xmm1
-	por	xmm2,xmm0
-	pshufb	xmm7,[eax]
-	movdqa	[ebx-32],xmm2
-	paddd	xmm5,xmm7
-	pxor	xmm3,xmm5
-	movdqa	xmm2,[ebx-48]
-	movdqa	xmm0,xmm3
-	pslld	xmm3,12
-	psrld	xmm0,20
-	por	xmm3,xmm0
-	movdqa	xmm0,[ebx-128]
-	paddd	xmm1,xmm3
-	pxor	xmm7,xmm1
-	movdqa	[ebx-80],xmm1
-	pshufb	xmm7,[16+eax]
-	paddd	xmm5,xmm7
-	movdqa	xmm6,xmm7
-	pxor	xmm3,xmm5
-	paddd	xmm0,xmm2
-	movdqa	xmm1,xmm3
-	pslld	xmm3,7
-	psrld	xmm1,25
-	pxor	xmm6,xmm0
-	por	xmm3,xmm1
-	pshufb	xmm6,[eax]
-	movdqa	[ebx-16],xmm3
-	paddd	xmm4,xmm6
-	pxor	xmm2,xmm4
-	movdqa	xmm3,[ebx-32]
-	movdqa	xmm1,xmm2
-	pslld	xmm2,12
-	psrld	xmm1,20
-	por	xmm2,xmm1
-	movdqa	xmm1,[ebx-112]
-	paddd	xmm0,xmm2
-	movdqa	xmm7,[64+ebx]
-	pxor	xmm6,xmm0
-	movdqa	[ebx-128],xmm0
-	pshufb	xmm6,[16+eax]
-	paddd	xmm4,xmm6
-	movdqa	[112+ebx],xmm6
-	pxor	xmm2,xmm4
-	paddd	xmm1,xmm3
-	movdqa	xmm0,xmm2
-	pslld	xmm2,7
-	psrld	xmm0,25
-	pxor	xmm7,xmm1
-	por	xmm2,xmm0
-	movdqa	[32+ebx],xmm4
-	pshufb	xmm7,[eax]
-	movdqa	[ebx-48],xmm2
-	paddd	xmm5,xmm7
-	movdqa	xmm4,[ebx]
-	pxor	xmm3,xmm5
-	movdqa	xmm2,[ebx-16]
-	movdqa	xmm0,xmm3
-	pslld	xmm3,12
-	psrld	xmm0,20
-	por	xmm3,xmm0
-	movdqa	xmm0,[ebx-96]
-	paddd	xmm1,xmm3
-	movdqa	xmm6,[80+ebx]
-	pxor	xmm7,xmm1
-	movdqa	[ebx-112],xmm1
-	pshufb	xmm7,[16+eax]
-	paddd	xmm5,xmm7
-	movdqa	[64+ebx],xmm7
-	pxor	xmm3,xmm5
-	paddd	xmm0,xmm2
-	movdqa	xmm1,xmm3
-	pslld	xmm3,7
-	psrld	xmm1,25
-	pxor	xmm6,xmm0
-	por	xmm3,xmm1
-	movdqa	[48+ebx],xmm5
-	pshufb	xmm6,[eax]
-	movdqa	[ebx-32],xmm3
-	paddd	xmm4,xmm6
-	movdqa	xmm5,[16+ebx]
-	pxor	xmm2,xmm4
-	movdqa	xmm3,[ebx-64]
-	movdqa	xmm1,xmm2
-	pslld	xmm2,12
-	psrld	xmm1,20
-	por	xmm2,xmm1
-	movdqa	xmm1,[ebx-80]
-	paddd	xmm0,xmm2
-	movdqa	xmm7,[96+ebx]
-	pxor	xmm6,xmm0
-	movdqa	[ebx-96],xmm0
-	pshufb	xmm6,[16+eax]
-	paddd	xmm4,xmm6
-	movdqa	[80+ebx],xmm6
-	pxor	xmm2,xmm4
-	paddd	xmm1,xmm3
-	movdqa	xmm0,xmm2
-	pslld	xmm2,7
-	psrld	xmm0,25
-	pxor	xmm7,xmm1
-	por	xmm2,xmm0
-	pshufb	xmm7,[eax]
-	movdqa	[ebx-16],xmm2
-	paddd	xmm5,xmm7
-	pxor	xmm3,xmm5
-	movdqa	xmm0,xmm3
-	pslld	xmm3,12
-	psrld	xmm0,20
-	por	xmm3,xmm0
-	movdqa	xmm0,[ebx-128]
-	paddd	xmm1,xmm3
-	movdqa	xmm6,[64+ebx]
-	pxor	xmm7,xmm1
-	movdqa	[ebx-80],xmm1
-	pshufb	xmm7,[16+eax]
-	paddd	xmm5,xmm7
-	movdqa	[96+ebx],xmm7
-	pxor	xmm3,xmm5
-	movdqa	xmm1,xmm3
-	pslld	xmm3,7
-	psrld	xmm1,25
-	por	xmm3,xmm1
-	dec	edx
-	jnz	NEAR L$010loop
-	movdqa	[ebx-64],xmm3
-	movdqa	[ebx],xmm4
-	movdqa	[16+ebx],xmm5
-	movdqa	[64+ebx],xmm6
-	movdqa	[96+ebx],xmm7
-	movdqa	xmm1,[ebx-112]
-	movdqa	xmm2,[ebx-96]
-	movdqa	xmm3,[ebx-80]
-	paddd	xmm0,[ebp-128]
-	paddd	xmm1,[ebp-112]
-	paddd	xmm2,[ebp-96]
-	paddd	xmm3,[ebp-80]
-	movdqa	xmm6,xmm0
-	punpckldq	xmm0,xmm1
-	movdqa	xmm7,xmm2
-	punpckldq	xmm2,xmm3
-	punpckhdq	xmm6,xmm1
-	punpckhdq	xmm7,xmm3
-	movdqa	xmm1,xmm0
-	punpcklqdq	xmm0,xmm2
-	movdqa	xmm3,xmm6
-	punpcklqdq	xmm6,xmm7
-	punpckhqdq	xmm1,xmm2
-	punpckhqdq	xmm3,xmm7
-	movdqu	xmm4,[esi-128]
-	movdqu	xmm5,[esi-64]
-	movdqu	xmm2,[esi]
-	movdqu	xmm7,[64+esi]
-	lea	esi,[16+esi]
-	pxor	xmm4,xmm0
-	movdqa	xmm0,[ebx-64]
-	pxor	xmm5,xmm1
-	movdqa	xmm1,[ebx-48]
-	pxor	xmm6,xmm2
-	movdqa	xmm2,[ebx-32]
-	pxor	xmm7,xmm3
-	movdqa	xmm3,[ebx-16]
-	movdqu	[edi-128],xmm4
-	movdqu	[edi-64],xmm5
-	movdqu	[edi],xmm6
-	movdqu	[64+edi],xmm7
-	lea	edi,[16+edi]
-	paddd	xmm0,[ebp-64]
-	paddd	xmm1,[ebp-48]
-	paddd	xmm2,[ebp-32]
-	paddd	xmm3,[ebp-16]
-	movdqa	xmm6,xmm0
-	punpckldq	xmm0,xmm1
-	movdqa	xmm7,xmm2
-	punpckldq	xmm2,xmm3
-	punpckhdq	xmm6,xmm1
-	punpckhdq	xmm7,xmm3
-	movdqa	xmm1,xmm0
-	punpcklqdq	xmm0,xmm2
-	movdqa	xmm3,xmm6
-	punpcklqdq	xmm6,xmm7
-	punpckhqdq	xmm1,xmm2
-	punpckhqdq	xmm3,xmm7
-	movdqu	xmm4,[esi-128]
-	movdqu	xmm5,[esi-64]
-	movdqu	xmm2,[esi]
-	movdqu	xmm7,[64+esi]
-	lea	esi,[16+esi]
-	pxor	xmm4,xmm0
-	movdqa	xmm0,[ebx]
-	pxor	xmm5,xmm1
-	movdqa	xmm1,[16+ebx]
-	pxor	xmm6,xmm2
-	movdqa	xmm2,[32+ebx]
-	pxor	xmm7,xmm3
-	movdqa	xmm3,[48+ebx]
-	movdqu	[edi-128],xmm4
-	movdqu	[edi-64],xmm5
-	movdqu	[edi],xmm6
-	movdqu	[64+edi],xmm7
-	lea	edi,[16+edi]
-	paddd	xmm0,[ebp]
-	paddd	xmm1,[16+ebp]
-	paddd	xmm2,[32+ebp]
-	paddd	xmm3,[48+ebp]
-	movdqa	xmm6,xmm0
-	punpckldq	xmm0,xmm1
-	movdqa	xmm7,xmm2
-	punpckldq	xmm2,xmm3
-	punpckhdq	xmm6,xmm1
-	punpckhdq	xmm7,xmm3
-	movdqa	xmm1,xmm0
-	punpcklqdq	xmm0,xmm2
-	movdqa	xmm3,xmm6
-	punpcklqdq	xmm6,xmm7
-	punpckhqdq	xmm1,xmm2
-	punpckhqdq	xmm3,xmm7
-	movdqu	xmm4,[esi-128]
-	movdqu	xmm5,[esi-64]
-	movdqu	xmm2,[esi]
-	movdqu	xmm7,[64+esi]
-	lea	esi,[16+esi]
-	pxor	xmm4,xmm0
-	movdqa	xmm0,[64+ebx]
-	pxor	xmm5,xmm1
-	movdqa	xmm1,[80+ebx]
-	pxor	xmm6,xmm2
-	movdqa	xmm2,[96+ebx]
-	pxor	xmm7,xmm3
-	movdqa	xmm3,[112+ebx]
-	movdqu	[edi-128],xmm4
-	movdqu	[edi-64],xmm5
-	movdqu	[edi],xmm6
-	movdqu	[64+edi],xmm7
-	lea	edi,[16+edi]
-	paddd	xmm0,[64+ebp]
-	paddd	xmm1,[80+ebp]
-	paddd	xmm2,[96+ebp]
-	paddd	xmm3,[112+ebp]
-	movdqa	xmm6,xmm0
-	punpckldq	xmm0,xmm1
-	movdqa	xmm7,xmm2
-	punpckldq	xmm2,xmm3
-	punpckhdq	xmm6,xmm1
-	punpckhdq	xmm7,xmm3
-	movdqa	xmm1,xmm0
-	punpcklqdq	xmm0,xmm2
-	movdqa	xmm3,xmm6
-	punpcklqdq	xmm6,xmm7
-	punpckhqdq	xmm1,xmm2
-	punpckhqdq	xmm3,xmm7
-	movdqu	xmm4,[esi-128]
-	movdqu	xmm5,[esi-64]
-	movdqu	xmm2,[esi]
-	movdqu	xmm7,[64+esi]
-	lea	esi,[208+esi]
-	pxor	xmm4,xmm0
-	pxor	xmm5,xmm1
-	pxor	xmm6,xmm2
-	pxor	xmm7,xmm3
-	movdqu	[edi-128],xmm4
-	movdqu	[edi-64],xmm5
-	movdqu	[edi],xmm6
-	movdqu	[64+edi],xmm7
-	lea	edi,[208+edi]
-	sub	ecx,256
-	jnc	NEAR L$009outer_loop
-	add	ecx,256
-	jz	NEAR L$011done
-	mov	ebx,DWORD [520+esp]
-	lea	esi,[esi-128]
-	mov	edx,DWORD [516+esp]
-	lea	edi,[edi-128]
-	movd	xmm2,DWORD [64+ebp]
-	movdqu	xmm3,[ebx]
-	paddd	xmm2,[96+eax]
-	pand	xmm3,[112+eax]
-	por	xmm3,xmm2
 L$0081x:
 	movdqa	xmm0,[32+eax]
 	movdqu	xmm1,[edx]
@@ -850,9 +413,9 @@ L$0081x:
 	movdqa	[32+esp],xmm2
 	movdqa	[48+esp],xmm3
 	mov	edx,10
-	jmp	NEAR L$012loop1x
+	jmp	NEAR L$009loop1x
 align	16
-L$013outer1x:
+L$010outer1x:
 	movdqa	xmm3,[80+eax]
 	movdqa	xmm0,[esp]
 	movdqa	xmm1,[16+esp]
@@ -860,9 +423,9 @@ L$013outer1x:
 	paddd	xmm3,[48+esp]
 	mov	edx,10
 	movdqa	[48+esp],xmm3
-	jmp	NEAR L$012loop1x
+	jmp	NEAR L$009loop1x
 align	16
-L$012loop1x:
+L$009loop1x:
 	paddd	xmm0,xmm1
 	pxor	xmm3,xmm0
 db	102,15,56,0,222
@@ -907,13 +470,13 @@ db	102,15,56,0,223
 	pshufd	xmm1,xmm1,147
 	pshufd	xmm3,xmm3,57
 	dec	edx
-	jnz	NEAR L$012loop1x
+	jnz	NEAR L$009loop1x
 	paddd	xmm0,[esp]
 	paddd	xmm1,[16+esp]
 	paddd	xmm2,[32+esp]
 	paddd	xmm3,[48+esp]
 	cmp	ecx,64
-	jb	NEAR L$014tail
+	jb	NEAR L$011tail
 	movdqu	xmm4,[esi]
 	movdqu	xmm5,[16+esi]
 	pxor	xmm0,xmm4
@@ -929,9 +492,9 @@ db	102,15,56,0,223
 	movdqu	[48+edi],xmm3
 	lea	edi,[64+edi]
 	sub	ecx,64
-	jnz	NEAR L$013outer1x
-	jmp	NEAR L$011done
-L$014tail:
+	jnz	NEAR L$010outer1x
+	jmp	NEAR L$012done
+L$011tail:
 	movdqa	[esp],xmm0
 	movdqa	[16+esp],xmm1
 	movdqa	[32+esp],xmm2
@@ -939,15 +502,15 @@ L$014tail:
 	xor	eax,eax
 	xor	edx,edx
 	xor	ebp,ebp
-L$015tail_loop:
+L$013tail_loop:
 	mov	al,BYTE [ebp*1+esp]
 	mov	dl,BYTE [ebp*1+esi]
 	lea	ebp,[1+ebp]
 	xor	al,dl
 	mov	BYTE [ebp*1+edi-1],al
 	dec	ecx
-	jnz	NEAR L$015tail_loop
-L$011done:
+	jnz	NEAR L$013tail_loop
+L$012done:
 	mov	esp,DWORD [512+esp]
 	pop	edi
 	pop	esi
@@ -991,7 +554,7 @@ L$xop_shortcut:
 	lea	eax,[(L$ssse3_data-L$pic_point)+eax]
 	vmovdqu	xmm3,[ebx]
 	cmp	ecx,256
-	jb	NEAR L$0161x
+	jb	NEAR L$0141x
 	mov	DWORD [516+esp],edx
 	mov	DWORD [520+esp],ebx
 	sub	ecx,256
@@ -1036,9 +599,9 @@ L$xop_shortcut:
 	vmovdqa	[ebp-80],xmm7
 	lea	esi,[128+esi]
 	lea	edi,[128+edi]
-	jmp	NEAR L$017outer_loop
+	jmp	NEAR L$015outer_loop
 align	32
-L$017outer_loop:
+L$015outer_loop:
 	vmovdqa	xmm1,[ebp-112]
 	vmovdqa	xmm2,[ebp-96]
 	vmovdqa	xmm3,[ebp-80]
@@ -1073,7 +636,7 @@ L$017outer_loop:
 	mov	edx,10
 	nop
 align	32
-L$018loop:
+L$016loop:
 	vpaddd	xmm0,xmm0,xmm3
 	vpxor	xmm6,xmm6,xmm0
 db	143,232,120,194,246,16
@@ -1223,7 +786,7 @@ db	143,232,120,194,255,8
 	vpxor	xmm3,xmm3,xmm5
 db	143,232,120,194,219,7
 	dec	edx
-	jnz	NEAR L$018loop
+	jnz	NEAR L$016loop
 	vmovdqa	[ebx-64],xmm3
 	vmovdqa	[ebx],xmm4
 	vmovdqa	[16+ebx],xmm5
@@ -1333,9 +896,9 @@ db	143,232,120,194,219,7
 	vmovdqu	[64+edi],xmm7
 	lea	edi,[208+edi]
 	sub	ecx,256
-	jnc	NEAR L$017outer_loop
+	jnc	NEAR L$015outer_loop
 	add	ecx,256
-	jz	NEAR L$019done
+	jz	NEAR L$017done
 	mov	ebx,DWORD [520+esp]
 	lea	esi,[esi-128]
 	mov	edx,DWORD [516+esp]
@@ -1345,7 +908,7 @@ db	143,232,120,194,219,7
 	vpaddd	xmm2,xmm2,[96+eax]
 	vpand	xmm3,xmm3,[112+eax]
 	vpor	xmm3,xmm3,xmm2
-L$0161x:
+L$0141x:
 	vmovdqa	xmm0,[32+eax]
 	vmovdqu	xmm1,[edx]
 	vmovdqu	xmm2,[16+edx]
@@ -1357,9 +920,9 @@ L$0161x:
 	vmovdqa	[32+esp],xmm2
 	vmovdqa	[48+esp],xmm3
 	mov	edx,10
-	jmp	NEAR L$020loop1x
+	jmp	NEAR L$018loop1x
 align	16
-L$021outer1x:
+L$019outer1x:
 	vmovdqa	xmm3,[80+eax]
 	vmovdqa	xmm0,[esp]
 	vmovdqa	xmm1,[16+esp]
@@ -1367,9 +930,9 @@ L$021outer1x:
 	vpaddd	xmm3,xmm3,[48+esp]
 	mov	edx,10
 	vmovdqa	[48+esp],xmm3
-	jmp	NEAR L$020loop1x
+	jmp	NEAR L$018loop1x
 align	16
-L$020loop1x:
+L$018loop1x:
 	vpaddd	xmm0,xmm0,xmm1
 	vpxor	xmm3,xmm3,xmm0
 db	143,232,120,194,219,16
@@ -1401,13 +964,13 @@ db	143,232,120,194,201,7
 	vpshufd	xmm1,xmm1,147
 	vpshufd	xmm3,xmm3,57
 	dec	edx
-	jnz	NEAR L$020loop1x
+	jnz	NEAR L$018loop1x
 	vpaddd	xmm0,xmm0,[esp]
 	vpaddd	xmm1,xmm1,[16+esp]
 	vpaddd	xmm2,xmm2,[32+esp]
 	vpaddd	xmm3,xmm3,[48+esp]
 	cmp	ecx,64
-	jb	NEAR L$022tail
+	jb	NEAR L$020tail
 	vpxor	xmm0,xmm0,[esi]
 	vpxor	xmm1,xmm1,[16+esi]
 	vpxor	xmm2,xmm2,[32+esi]
@@ -1419,9 +982,9 @@ db	143,232,120,194,201,7
 	vmovdqu	[48+edi],xmm3
 	lea	edi,[64+edi]
 	sub	ecx,64
-	jnz	NEAR L$021outer1x
-	jmp	NEAR L$019done
-L$022tail:
+	jnz	NEAR L$019outer1x
+	jmp	NEAR L$017done
+L$020tail:
 	vmovdqa	[esp],xmm0
 	vmovdqa	[16+esp],xmm1
 	vmovdqa	[32+esp],xmm2
@@ -1429,15 +992,15 @@ L$022tail:
 	xor	eax,eax
 	xor	edx,edx
 	xor	ebp,ebp
-L$023tail_loop:
+L$021tail_loop:
 	mov	al,BYTE [ebp*1+esp]
 	mov	dl,BYTE [ebp*1+esi]
 	lea	ebp,[1+ebp]
 	xor	al,dl
 	mov	BYTE [ebp*1+edi-1],al
 	dec	ecx
-	jnz	NEAR L$023tail_loop
-L$019done:
+	jnz	NEAR L$021tail_loop
+L$017done:
 	vzeroupper
 	mov	esp,DWORD [512+esp]
 	pop	edi

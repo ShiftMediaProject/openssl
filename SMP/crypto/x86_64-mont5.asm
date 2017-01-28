@@ -1938,6 +1938,7 @@ $L$8x_tail:
 
 ALIGN	32
 $L$8x_tail_done:
+	xor	rax,rax
 	add	r8,QWORD[rdx]
 	adc	r9,0
 	adc	r10,0
@@ -1946,9 +1947,7 @@ $L$8x_tail_done:
 	adc	r13,0
 	adc	r14,0
 	adc	r15,0
-
-
-	xor	rax,rax
+	adc	rax,0
 
 	neg	rsi
 $L$8x_no_tail:
@@ -3435,6 +3434,7 @@ DB	0xc4,0x62,0xfb,0xf6,0xa5,0x20,0x00,0x00,0x00
 
 ALIGN	32
 $L$sqrx8x_tail_done:
+	xor	rax,rax
 	add	r8,QWORD[((24+8))+rsp]
 	adc	r9,0
 	adc	r10,0
@@ -3443,9 +3443,7 @@ $L$sqrx8x_tail_done:
 	adc	r13,0
 	adc	r14,0
 	adc	r15,0
-
-
-	mov	rax,rsi
+	adc	rax,0
 
 	sub	rsi,QWORD[((16+8))+rsp]
 $L$sqrx8x_no_tail:
@@ -3460,7 +3458,7 @@ DB	102,72,15,126,213
 	adc	r13,QWORD[40+rdi]
 	adc	r14,QWORD[48+rdi]
 	adc	r15,QWORD[56+rdi]
-	adc	rax,rax
+	adc	rax,0
 
 	mov	rbx,QWORD[((32+8))+rsp]
 	mov	rdx,QWORD[64+rcx*1+rdi]

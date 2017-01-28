@@ -4036,4 +4036,10 @@ EXPORTS
     OCSP_RESPID_set_by_name
     DSO_dsobyaddr
     DSO_pathbyaddr
+    CT_POLICY_EVAL_CTX_get_time
+    CT_POLICY_EVAL_CTX_set_time
+    DH_check_params
+    X509_VERIFY_PARAM_get_inh_flags
+    X509_VERIFY_PARAM_get_time
+    X509_VERIFY_PARAM_set_inh_flags
 
