@@ -1080,7 +1080,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\vsyasm.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\yasm.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -1299,6 +1299,9 @@ if exist $(OutDir)\licenses\openssl.txt (
 del /f /q $(OutDir)\licenses\openssl.txt
 )</Command>
     </CustomBuildStep>
+    <YASM>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -1438,6 +1441,9 @@ if exist $(OutDir)\licenses\openssl.txt (
 del /f /q $(OutDir)\licenses\openssl.txt
 )</Command>
     </CustomBuildStep>
+    <YASM>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -1565,6 +1571,9 @@ if exist $(OutDir)\licenses\openssl.txt (
 del /f /q $(OutDir)\licenses\openssl.txt
 )</Command>
     </CustomBuildStep>
+    <YASM>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -1705,6 +1714,9 @@ if exist $(OutDir)\licenses\openssl.txt (
 del /f /q $(OutDir)\licenses\openssl.txt
 )</Command>
     </CustomBuildStep>
+    <YASM>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </YASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -2589,6 +2601,6 @@ del /f /q $(OutDir)\licenses\openssl.txt
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\vsyasm.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\yasm.targets" />
   </ImportGroup>
 </Project>
