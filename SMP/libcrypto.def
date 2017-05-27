@@ -4042,4 +4042,12 @@ EXPORTS
     X509_VERIFY_PARAM_get_inh_flags
     X509_VERIFY_PARAM_get_time
     X509_VERIFY_PARAM_set_inh_flags
+    INT32_it
+    INT64_it
+    UINT32_it
+    UINT64_it
+    ZINT32_it
+    ZINT64_it
+    ZUINT32_it
+    ZUINT64_it
 

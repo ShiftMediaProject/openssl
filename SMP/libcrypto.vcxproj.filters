@@ -2103,6 +2103,9 @@
     <ClCompile Include="..\crypto\dllmain.c">
       <Filter>Source Files\crypto</Filter>
     </ClCompile>
+    <ClCompile Include="..\crypto\asn1\x_int64.c">
+      <Filter>Source Files\crypto\asn1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\openssl\ocsp.h">
@@ -2565,6 +2568,9 @@
       <Filter>Header Files\include\internal</Filter>
     </ClInclude>
     <ClInclude Include="..\include\internal\conf.h">
+      <Filter>Header Files\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\internal\asn1t.h">
       <Filter>Header Files\include\internal</Filter>
     </ClInclude>
   </ItemGroup>

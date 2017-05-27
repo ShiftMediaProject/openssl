@@ -119,14 +119,6 @@ $L$intel:
 	shr	r10d,14
 	and	r10d,0xfff
 
-	cmp	r11d,7
-	jb	NEAR $L$nocacheinfo
-
-	mov	eax,7
-	xor	ecx,ecx
-	cpuid
-	mov	DWORD[8+rdi],ebx
-
 $L$nocacheinfo:
 	mov	eax,1
 	cpuid
@@ -156,6 +148,15 @@ $L$generic:
 	or	r9d,ecx
 
 	mov	r10d,edx
+
+	cmp	r11d,7
+	jb	NEAR $L$no_extended_info
+	mov	eax,7
+	xor	ecx,ecx
+	cpuid
+	mov	DWORD[8+rdi],ebx
+$L$no_extended_info:
+
 	bt	r9d,27
 	jnc	NEAR $L$clear_avx
 	xor	ecx,ecx

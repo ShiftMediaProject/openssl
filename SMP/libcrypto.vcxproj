@@ -106,6 +106,7 @@
     <ClCompile Include="..\crypto\asn1\x_algor.c" />
     <ClCompile Include="..\crypto\asn1\x_bignum.c" />
     <ClCompile Include="..\crypto\asn1\x_info.c" />
+    <ClCompile Include="..\crypto\asn1\x_int64.c" />
     <ClCompile Include="..\crypto\asn1\x_long.c" />
     <ClCompile Include="..\crypto\asn1\x_pkey.c" />
     <ClCompile Include="..\crypto\asn1\x_sig.c" />
@@ -732,6 +733,7 @@
     <ClInclude Include="..\crypto\x509v3\ext_dat.h" />
     <ClInclude Include="..\crypto\x509v3\pcy_int.h" />
     <ClInclude Include="..\crypto\x509\x509_lcl.h" />
+    <ClInclude Include="..\include\internal\asn1t.h" />
     <ClInclude Include="..\include\internal\bio.h" />
     <ClInclude Include="..\include\internal\comp.h" />
     <ClInclude Include="..\include\internal\conf.h" />
