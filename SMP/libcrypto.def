@@ -876,6 +876,7 @@ EXPORTS
     CRYPTO_realloc
     CRYPTO_secure_actual_size
     CRYPTO_secure_allocated
+    CRYPTO_secure_clear_free
     CRYPTO_secure_free
     CRYPTO_secure_malloc
     CRYPTO_secure_malloc_done
@@ -905,10 +906,12 @@ EXPORTS
     CT_POLICY_EVAL_CTX_get0_cert
     CT_POLICY_EVAL_CTX_get0_issuer
     CT_POLICY_EVAL_CTX_get0_log_store
+    CT_POLICY_EVAL_CTX_get_time
     CT_POLICY_EVAL_CTX_new
     CT_POLICY_EVAL_CTX_set1_cert
     CT_POLICY_EVAL_CTX_set1_issuer
     CT_POLICY_EVAL_CTX_set_shared_CTLOG_STORE
+    CT_POLICY_EVAL_CTX_set_time
     Camellia_cbc_encrypt
     Camellia_cfb128_encrypt
     Camellia_cfb1_encrypt
@@ -956,6 +959,7 @@ EXPORTS
     DH_OpenSSL
     DH_bits
     DH_check
+    DH_check_params
     DH_check_pub_key
     DH_clear_flags
     DH_compute_key
@@ -1095,6 +1099,7 @@ EXPORTS
     DSO_bind_func
     DSO_convert_filename
     DSO_ctrl
+    DSO_dsobyaddr
     DSO_flags
     DSO_free
     DSO_get_filename
@@ -1102,6 +1107,7 @@ EXPORTS
     DSO_load
     DSO_merge
     DSO_new
+    DSO_pathbyaddr
     DSO_set_filename
     DSO_up_ref
     ECDH_KDF_X9_62
@@ -1732,6 +1738,7 @@ EXPORTS
     EVP_PKEY_set1_DSA
     EVP_PKEY_set1_EC_KEY
     EVP_PKEY_set1_RSA
+    EVP_PKEY_set1_engine
     EVP_PKEY_set1_tls_encodedpoint
     EVP_PKEY_set_type
     EVP_PKEY_set_type_str
@@ -1923,6 +1930,8 @@ EXPORTS
     IDEA_options
     IDEA_set_decrypt_key
     IDEA_set_encrypt_key
+    INT32_it
+    INT64_it
     IPAddressChoice_free
     IPAddressChoice_it
     IPAddressChoice_new
@@ -2088,7 +2097,10 @@ EXPORTS
     OCSP_RESPDATA_new
     OCSP_RESPID_free
     OCSP_RESPID_it
+    OCSP_RESPID_match
     OCSP_RESPID_new
+    OCSP_RESPID_set_by_key
+    OCSP_RESPID_set_by_name
     OCSP_RESPONSE_free
     OCSP_RESPONSE_it
     OCSP_RESPONSE_new
@@ -2950,6 +2962,8 @@ EXPORTS
     TXT_DB_insert
     TXT_DB_read
     TXT_DB_write
+    UINT32_it
+    UINT64_it
     UI_OpenSSL
     UI_UTIL_read_pw
     UI_UTIL_read_pw_string
@@ -3418,6 +3432,8 @@ EXPORTS
     X509_VERIFY_PARAM_get_count
     X509_VERIFY_PARAM_get_depth
     X509_VERIFY_PARAM_get_flags
+    X509_VERIFY_PARAM_get_inh_flags
+    X509_VERIFY_PARAM_get_time
     X509_VERIFY_PARAM_inherit
     X509_VERIFY_PARAM_lookup
     X509_VERIFY_PARAM_move_peername
@@ -3433,6 +3449,7 @@ EXPORTS
     X509_VERIFY_PARAM_set_depth
     X509_VERIFY_PARAM_set_flags
     X509_VERIFY_PARAM_set_hostflags
+    X509_VERIFY_PARAM_set_inh_flags
     X509_VERIFY_PARAM_set_purpose
     X509_VERIFY_PARAM_set_time
     X509_VERIFY_PARAM_set_trust
@@ -3605,7 +3622,11 @@ EXPORTS
     X509v3_get_ext_by_OBJ
     X509v3_get_ext_by_critical
     X509v3_get_ext_count
+    ZINT32_it
+    ZINT64_it
     ZLONG_it
+    ZUINT32_it
+    ZUINT64_it
     _shadow_DES_check_key
     a2d_ASN1_OBJECT
     a2i_ASN1_ENUMERATED
@@ -4031,23 +4052,4 @@ EXPORTS
     v2i_GENERAL_NAMES
     v2i_GENERAL_NAME
     v2i_GENERAL_NAME_ex
-    OCSP_RESPID_match
-    OCSP_RESPID_set_by_key
-    OCSP_RESPID_set_by_name
-    DSO_dsobyaddr
-    DSO_pathbyaddr
-    CT_POLICY_EVAL_CTX_get_time
-    CT_POLICY_EVAL_CTX_set_time
-    DH_check_params
-    X509_VERIFY_PARAM_get_inh_flags
-    X509_VERIFY_PARAM_get_time
-    X509_VERIFY_PARAM_set_inh_flags
-    INT32_it
-    INT64_it
-    UINT32_it
-    UINT64_it
-    ZINT32_it
-    ZINT64_it
-    ZUINT32_it
-    ZUINT64_it
 
