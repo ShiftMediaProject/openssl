@@ -2164,6 +2164,7 @@ EXPORTS
     OCSP_resp_get0_id
     OCSP_resp_get0_produced_at
     OCSP_resp_get0_signature
+    OCSP_resp_get0_signer
     OCSP_response_create
     OCSP_response_get1_basic
     OCSP_response_status
@@ -3484,6 +3485,7 @@ EXPORTS
     X509_find_by_issuer_and_serial
     X509_find_by_subject
     X509_free
+    X509_get0_authority_key_id
     X509_get0_extensions
     X509_get0_notAfter
     X509_get0_notBefore
