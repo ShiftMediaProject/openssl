@@ -3171,9 +3171,32 @@ EXPORTS
     X509_LOOKUP_ctrl
     X509_LOOKUP_file
     X509_LOOKUP_free
+    X509_LOOKUP_get_method_data
+    X509_LOOKUP_get_store
     X509_LOOKUP_hash_dir
     X509_LOOKUP_init
+    X509_LOOKUP_meth_free
+    X509_LOOKUP_meth_get_ctrl
+    X509_LOOKUP_meth_get_free
+    X509_LOOKUP_meth_get_get_by_alias
+    X509_LOOKUP_meth_get_get_by_fingerprint
+    X509_LOOKUP_meth_get_get_by_issuer_serial
+    X509_LOOKUP_meth_get_get_by_subject
+    X509_LOOKUP_meth_get_init
+    X509_LOOKUP_meth_get_new_item
+    X509_LOOKUP_meth_get_shutdown
+    X509_LOOKUP_meth_new
+    X509_LOOKUP_meth_set_ctrl
+    X509_LOOKUP_meth_set_free
+    X509_LOOKUP_meth_set_get_by_alias
+    X509_LOOKUP_meth_set_get_by_fingerprint
+    X509_LOOKUP_meth_set_get_by_issuer_serial
+    X509_LOOKUP_meth_set_get_by_subject
+    X509_LOOKUP_meth_set_init
+    X509_LOOKUP_meth_set_new_item
+    X509_LOOKUP_meth_set_shutdown
     X509_LOOKUP_new
+    X509_LOOKUP_set_method_data
     X509_LOOKUP_shutdown
     X509_NAME_ENTRY_create_by_NID
     X509_NAME_ENTRY_create_by_OBJ
@@ -3220,6 +3243,8 @@ EXPORTS
     X509_OBJECT_new
     X509_OBJECT_retrieve_by_subject
     X509_OBJECT_retrieve_match
+    X509_OBJECT_set1_X509
+    X509_OBJECT_set1_X509_CRL
     X509_OBJECT_up_ref_count
     X509_PKEY_free
     X509_PKEY_new
@@ -3433,6 +3458,7 @@ EXPORTS
     X509_VERIFY_PARAM_get_count
     X509_VERIFY_PARAM_get_depth
     X509_VERIFY_PARAM_get_flags
+    X509_VERIFY_PARAM_get_hostflags
     X509_VERIFY_PARAM_get_inh_flags
     X509_VERIFY_PARAM_get_time
     X509_VERIFY_PARAM_inherit
@@ -3642,6 +3668,9 @@ EXPORTS
     b2i_PrivateKey_bio
     b2i_PublicKey
     b2i_PublicKey_bio
+    conf_ssl_get
+    conf_ssl_get_cmd
+    conf_ssl_name_find
     d2i_ACCESS_DESCRIPTION
     d2i_ASIdOrRange
     d2i_ASIdentifierChoice

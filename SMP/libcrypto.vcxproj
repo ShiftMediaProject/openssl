@@ -233,6 +233,7 @@
     <ClCompile Include="..\crypto\conf\conf_mall.c" />
     <ClCompile Include="..\crypto\conf\conf_mod.c" />
     <ClCompile Include="..\crypto\conf\conf_sap.c" />
+    <ClCompile Include="..\crypto\conf\conf_ssl.c" />
     <ClCompile Include="..\crypto\cpt_err.c" />
     <ClCompile Include="..\crypto\cryptlib.c" />
     <ClCompile Include="..\crypto\ct\ct_b64.c" />
@@ -643,6 +644,7 @@
     <ClCompile Include="..\crypto\x509\x509_err.c" />
     <ClCompile Include="..\crypto\x509\x509_ext.c" />
     <ClCompile Include="..\crypto\x509\x509_lu.c" />
+    <ClCompile Include="..\crypto\x509\x509_meth.c" />
     <ClCompile Include="..\crypto\x509\x509_obj.c" />
     <ClCompile Include="..\crypto\x509\x509_r2x.c" />
     <ClCompile Include="..\crypto\x509\x509_req.c" />
@@ -683,6 +685,7 @@
     <ClInclude Include="..\crypto\cms\cms_lcl.h" />
     <ClInclude Include="..\crypto\comp\comp_lcl.h" />
     <ClInclude Include="..\crypto\conf\conf_def.h" />
+    <ClInclude Include="..\crypto\conf\conf_lcl.h" />
     <ClInclude Include="..\crypto\ct\ct_locl.h" />
     <ClInclude Include="..\crypto\des\des_locl.h" />
     <ClInclude Include="..\crypto\des\rpc_des.h" />
