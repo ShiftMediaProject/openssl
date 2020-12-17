@@ -37,6 +37,9 @@
     <Filter Include="Header Files\include\ssl\statem">
       <UniqueIdentifier>{94d8f6f1-a144-4254-9274-f10d27cad140}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SMP">
+      <UniqueIdentifier>{d659226d-96e4-4e4e-a818-2bd5e85e1fd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ms\uplink.h">
@@ -405,6 +408,9 @@
     </ClCompile>
     <ClCompile Include="..\ssl\statem\statem_lib.c">
       <Filter>Source Files\ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="deps_include.c">
+      <Filter>Source Files\SMP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

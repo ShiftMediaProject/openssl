@@ -15,16 +15,10 @@ Global
 		Debug|x86 = Debug|x86
 		DebugDLL|x64 = DebugDLL|x64
 		DebugDLL|x86 = DebugDLL|x86
-		DebugDLLStaticDeps|x64 = DebugDLLStaticDeps|x64
-		DebugDLLStaticDeps|x86 = DebugDLLStaticDeps|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 		ReleaseDLL|x64 = ReleaseDLL|x64
 		ReleaseDLL|x86 = ReleaseDLL|x86
-		ReleaseDLLStaticDeps|x64 = ReleaseDLLStaticDeps|x64
-		ReleaseDLLStaticDeps|x86 = ReleaseDLLStaticDeps|x86
-		ReleaseLTO|x64 = ReleaseLTO|x64
-		ReleaseLTO|x86 = ReleaseLTO|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.Debug|x64.ActiveCfg = Debug|x64
@@ -35,10 +29,6 @@ Global
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLL|x64.Build.0 = DebugDLL|x64
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLL|x86.ActiveCfg = DebugDLL|Win32
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLL|x86.Build.0 = DebugDLL|Win32
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLLStaticDeps|x64.ActiveCfg = Debug|x64
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLLStaticDeps|x64.Build.0 = Debug|x64
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLLStaticDeps|x86.ActiveCfg = Debug|Win32
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.DebugDLLStaticDeps|x86.Build.0 = Debug|Win32
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.Release|x64.ActiveCfg = Release|x64
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.Release|x64.Build.0 = Release|x64
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.Release|x86.ActiveCfg = Release|Win32
@@ -47,14 +37,6 @@ Global
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLL|x64.Build.0 = ReleaseDLL|x64
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLL|x86.ActiveCfg = ReleaseDLL|Win32
 		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLL|x86.Build.0 = ReleaseDLL|Win32
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLLStaticDeps|x64.ActiveCfg = Release|x64
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLLStaticDeps|x64.Build.0 = Release|x64
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLLStaticDeps|x86.ActiveCfg = Release|Win32
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseDLLStaticDeps|x86.Build.0 = Release|Win32
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseLTO|x64.ActiveCfg = ReleaseLTO|x64
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseLTO|x64.Build.0 = ReleaseLTO|x64
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseLTO|x86.ActiveCfg = ReleaseLTO|Win32
-		{558D1ADE-D5D5-4123-AD31-32F0DBD7B6AB}.ReleaseLTO|x86.Build.0 = ReleaseLTO|Win32
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.Debug|x64.ActiveCfg = Debug|x64
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.Debug|x64.Build.0 = Debug|x64
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.Debug|x86.ActiveCfg = Debug|Win32
@@ -63,10 +45,6 @@ Global
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLL|x64.Build.0 = DebugDLL|x64
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLL|x86.ActiveCfg = DebugDLL|Win32
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLL|x86.Build.0 = DebugDLL|Win32
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLLStaticDeps|x64.ActiveCfg = DebugDLLStaticDeps|x64
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLLStaticDeps|x64.Build.0 = DebugDLLStaticDeps|x64
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLLStaticDeps|x86.ActiveCfg = DebugDLLStaticDeps|Win32
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.DebugDLLStaticDeps|x86.Build.0 = DebugDLLStaticDeps|Win32
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.Release|x64.ActiveCfg = Release|x64
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.Release|x64.Build.0 = Release|x64
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.Release|x86.ActiveCfg = Release|Win32
@@ -75,14 +53,6 @@ Global
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLL|x64.Build.0 = ReleaseDLL|x64
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLL|x86.ActiveCfg = ReleaseDLL|Win32
 		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLL|x86.Build.0 = ReleaseDLL|Win32
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLLStaticDeps|x64.ActiveCfg = ReleaseDLLStaticDeps|x64
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLLStaticDeps|x64.Build.0 = ReleaseDLLStaticDeps|x64
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLLStaticDeps|x86.ActiveCfg = ReleaseDLLStaticDeps|Win32
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseDLLStaticDeps|x86.Build.0 = ReleaseDLLStaticDeps|Win32
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseLTO|x64.ActiveCfg = ReleaseLTO|x64
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseLTO|x64.Build.0 = ReleaseLTO|x64
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseLTO|x86.ActiveCfg = ReleaseLTO|Win32
-		{4022EC32-21E2-4116-BB9F-6AFF604C23FF}.ReleaseLTO|x86.Build.0 = ReleaseLTO|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
